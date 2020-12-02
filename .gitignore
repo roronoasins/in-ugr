@@ -1,4 +1,4 @@
 examples/
 .ipynb_checkpoints/
-notebooks/__pycache__/
-notebooks/pics/
+p2/notebooks/__pycache__/
+p2/notebooks/pics/
