@@ -34,7 +34,7 @@ def print_measure(measure, value):
     """
     print("{}: {:.3f}".format(measure, value))
 
-def pairplot(df, columns, labels):
+def pairplot(df, columns, labels, case, algorithm, subcase, k):
     """
     Devuelve una imagen pairplot.
 
@@ -46,8 +46,9 @@ def pairplot(df, columns, labels):
     """
     df_plot = df.loc[:,columns].dropna()
     df_plot['classif'] = labels
-    seaborn.pairplot(df_plot, hue='classif', palette='Paired')
-
+    pp =seaborn.pairplot(df_plot, hue='classif', palette='Paired', diag_kws={'bw': 0.3})
+    file = '../results/case'+str(case)+'/'+algorithm+'/pairplots/pairplot_'+algorithm+'_case'+str(case)+'_'+subcase+'_k'+str(k)
+    #pp.savefig(file+'.png')
 
 def denorm(data, df):
     """
@@ -55,7 +56,7 @@ def denorm(data, df):
     """
     return data*(df.max(axis=0)-df.min(axis=0))+df.min(axis=0)
 
-def visualize_centroids(centers, data, columns):
+def visualize_centroids(centers, data, columns, case, algorithm, subcase, k):
     """
     Visualiza los centroides.
 
@@ -71,6 +72,7 @@ def visualize_centroids(centers, data, columns):
     hm = seaborn.heatmap(df_centers, cmap="YlGnBu", annot=centers_desnormal, fmt='.3f', ax=ax)
     hm.set_xticklabels(hm.get_xticklabels(), rotation = 45, fontsize = 8)
     # estas tres lineas las he añadido para evitar que se corten la linea superior e inferior del heatmap
-    fig.savefig('pics/hm.png')
+    file = '../results/case'+str(case)+'/'+algorithm+'/heatmaps/hm_'+algorithm+'_case'+str(case)+'_'+subcase+'_k'+str(k)
+    #fig.savefig(file+'.png')
     
     return hm
