@@ -10,3 +10,5 @@ p2/doc/*.aux
 p2/doc/*.lof
 p2/doc/*.lot
 p2/results/
+p3/notebooks/catboost_info/
+p3/notebooks/results/
