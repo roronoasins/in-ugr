@@ -1,0 +1,20 @@
+,,,,,
+Submission,Description,Private Score,Local AUC,Local Acc,Date
+1,"Predicción eliminando valores nulos y usando las siguientes columnas: ['Año', 'Kilometros', 'Combustible', 'Mano', 'Consumo', 'Motor_CC', 'Potencia', 'Asientos', 'Descuento'] ​","0,73943","0,774507","0,801064",17-12
+2,Same than first submission but using imblearn(SMOTE),"0,72562","0,928768","0,885873",17-12
+3,Using XGBoost classifier and no missing values.,"0,72562","0,747393","0,805373",17-12
+4,Missing values imputing: Numeric - Mean Categorical - Most freq Model used: XGBoost Oversampling with SMOTE,"0,74547","0,957258","0,901131",18-12
+5,"Same than previous submission but now hyperparameter tuning done: Parameters used: {'max_depth': 19, 'min_child_weight': 2, 'eta': 0.05, 'subsample': 1.0, 'colsample_bytree': 1.0}","0,75496","0,939908","0,889281",19-12
+6,Using now lightgbm classifier with same preprocessing techs,"0,75754","0,778514","0,800581",22-12
+7,Prediction using lightgbm classifier with noise filter(EditedNearestNeighbors) and multiclass oversampling(with oversampler=MDO),"0,64106","0,988479","0,948383",22-12
+8,Same than 7th but now only using smote with MulticlassOversampling with DSRBF as oversampler,"0,76100","0,991525","0,970485",22-12
+9,lightgbm with noise filter(EditedNearestNeighbors) and MSMOTE oversampler,"0,62381","0,804244","0,907092",23-12
+10,Random Forest Classifier con tuning de parámetros,"0,72303","0,793589","0,800374",23-12
+11,"Ensemble stacking. estimators = [ ('lr', LogisticRegression(random_state=seed, multi_class='ovr', solver='liblinear', C=1)), ('gbc', GradientBoostingClassifier(random_state=seed)), ('rf1', RandomForestClassifier(random_state=seed, n_estimators=200, criterion='gini')), ('rf2', RandomForestClassifier(random_state=seed, n_estimators=200, criterion='entropy')), ('et1', ExtraTreesClassifier(random_state=seed, n_estimators=200, criterion='gini')), ('et2', ExtraTreesClassifier(random_state=seed, n_estimators=200, criterion='entropy')), ('lgb', lgb.LGBMClassifier(random_state=seed, n_jobs=-1)), ('nn', MLPClassifier(random_state=seed)) ] Data normalized and same preprocessing(but SMOTE and noise filter not used).","0,73856","0,699132","0,761826",24-12
+12,11th with undersampling(CondensedNearestNeighbour),"0,73770","0,767308","0,712209",24-12
+14,Catboost with AUC as eval_metric,"0,72389","0,969275",-,25-12
+15,Catboost using Accuracy as eval_metric,"0,72821",-,"0,840249",25-12
+16,lgb with hyperparameter tuning and SMOTETomek trying to reach better minority classification.,"0,73425","0,781858","0,747925",27-12
+17,Same than previous but default lgb cfg and sample_strategy=dict changed,"0,71613","0,743823","0,718880",27-12
+18,Same than previous but now applying SMOTETomek(using SMOTE and cleaning using Tomek links) to all dataset instead training part,"0,73684","0,795716","0,786492",27-12
+20,"lgb with default pars, new feature selection and new preprocessing(using le and knn imputer)","0,75323","0,720588","0,738589",31-12
