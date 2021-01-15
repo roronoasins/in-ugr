@@ -8,7 +8,13 @@ p2/doc/*.toc
 p2/doc/*.log
 p2/doc/*.aux
 p2/doc/*.lof
-p2/doc/*.lot
 p2/results/
 p3/notebooks/catboost_info/
 p3/notebooks/results/
+
+p3/doc/*.synctex.gz
+p3/doc/*.out
+p3/doc/*.toc
+p3/doc/*.log
+p3/doc/*.aux
+p3/doc/*.lof

@@ -1,0 +1,31 @@
+\begin{thebibliography}{1}
+
+\bibitem{svpypi}
+PyPI SMOTE-variants.
+\newblock \href{https://pypi.org/project/smote-variants/}{smote-variants
+  0.4.0}.
+
+\bibitem{skclean}
+Shihab~Shahriar Khan.
+\newblock
+  \href{https://scikit-clean.readthedocs.io/en/latest/examples/Introduction%20to%20Scikit-clean.html}{Introduction
+  to Scikit-clean}.
+
+\bibitem{skclean2}
+PyPI.
+\newblock
+  \href{https://scikit-clean.readthedocs.io/en/latest/examples/Introduction%20to%20Scikit-clean.html}{scikit-clean
+  0.1.2}.
+
+\bibitem{imb}
+V.~López. A. Fernandez. S. Garcia.~V. Palade and F.~Herrera.
+\newblock \href{https://sci2s.ugr.es/imbalanced}{An Insight into Classification
+  with Imbalanced Data: Empirical Results and Current Trends on Using Data
+  Intrinsic Characteristics}.
+
+\bibitem{noisy}
+Soft Computing and Intelligent Information Systems. A~University
+  of~Granada~research group.
+\newblock \href{https://sci2s.ugr.es/noisydata}{Noisy Data in Data Mining}.
+
+\end{thebibliography}
