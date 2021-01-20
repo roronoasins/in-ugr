@@ -35,13 +35,20 @@ num_classes = 26
 
 l = tf.keras.layers
 model = tf.keras.Sequential([
-    l.Conv2D(filters=6, kernel_size=(3, 3), activation='relu',input_shape=input_shape),
-    l.AveragePooling2D(),
+    l.Conv2D(filters=32, kernel_size=(3, 3), activation='relu',input_shape=input_shape),
+    #l.AveragePooling2D(),
     l.MaxPooling2D(2,2),
+    l.Dropout(0.2),
+    l.Conv2D(filters=64, kernel_size=(3, 3), activation='relu',input_shape=input_shape),
+    l.MaxPooling2D(2,2),
+    l.Dropout(0.2),
     l.Flatten(input_shape=input_shape),
-    l.Dense(units=120, activation='relu'),
+    l.Dense(units=512, activation='relu'),
+    l.Dropout(0.2),
     l.Dense(num_classes,activation='softmax')
 ])
+model.summary()
+
 model.compile(optimizer='rmsprop',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 #model.compile(optimizer='adam',loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 
